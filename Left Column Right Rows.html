@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            height: 100%;
+        }
+
+        body {
+            color: #333;
+            background: #fff;
+            height: 100%;
+            position: relative;
+        }
+
+        div {
+            -moz-box-sizing: border-box;
+            /*Firefox3.5+*/
+            -webkit-box-sizing: border-box;
+            /*Safari3.2+*/
+            -o-box-sizing: border-box;
+            /*Opera9.6*/
+            -ms-box-sizing: border-box;
+            /*IE8*/
+            box-sizing: border-box;
+        }
+
+        .clearfix {
+            overflow: auto;
+            _height: 1%
+        }
+
+        .left {
+            float: left
+        }
+
+        .main {
+            height: 100%;
+        }
+
+        .main .left {
+            width: 50%;
+            height: 100%;
+            
+        }
+
+        .main .left:nth-of-type(2) {
+            border-left: 0;
+        }
+
+        .left .line {
+            padding: 10px 20px;
+            border: 1px dashed #dedede;
+            height: 33.3333%
+        }
+
+        .left .line .text {
+            height: 100%;
+            background-color: #000;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main clearfix">
+        <div class="left"></div>
+        <div class="left">
+            <div class="line">
+                <div class="text"></div>
+            </div>
+            <div class="line">
+                <div class="text"></div>
+            </div>
+            <div class="line">
+                <div class="text"></div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
