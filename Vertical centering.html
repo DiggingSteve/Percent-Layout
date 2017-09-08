@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        html,
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            background-color: #000;
+        }
+
+        div,
+        span,
+        p {
+            -moz-box-sizing: border-box;
+            /*Firefox3.5+*/
+            -webkit-box-sizing: border-box;
+            /*Safari3.2+*/
+            -o-box-sizing: border-box;
+            /*Opera9.6*/
+            -ms-box-sizing: border-box;
+            /*IE8*/
+            box-sizing: border-box;
+        }
+
+        .line .block {
+            width: 300px;
+            height: 300px;
+            position: relative;
+            background-color: transparent;
+            margin: 1% 1%;
+
+            float: left;
+            border: 1px solid #fff;
+        }
+
+        .flex {
+            display: flex;
+            justify-content: center;
+            align-items: Center;
+        }
+
+        .minus_margin {
+            position: absolute;
+            width: 100px !important;
+            height: 100px !important;
+            top: 50%;
+            left: 50%;
+            margin-left: -50px;
+            /*需要固定高度宽度*/
+            margin-top: -50px;
+            text-align: center;
+        }
+
+        .zero {
+            position: absolute;
+            margin: auto;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+        }
+
+        .translate {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .content {
+
+            height: 50%;
+            width: 50%;
+            background-color: #fff;
+        }
+
+        .inline_block {
+            text-align: center;
+            font-size: 0;
+        }
+
+        .inline_block:after {
+            content: '';
+            width: 0;
+            height: 100%;
+            display: inline-block;
+            vertical-align: middle;
+        }
+
+        .vertical_middle {
+            vertical-align: middle;
+            display: inline-block;
+        }
+
+        .clearfix:after {
+            content: " ";
+            display: block;
+            clear: both;
+            height: 0;
+        }
+
+        .clearfix {
+            zoom: 1;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="line clearfix">
+        <div class="block flex">
+            <div class="content"></div>
+        </div>
+        <div class="block ">
+            <div class="content minus_margin"></div>
+        </div>
+        <div class="block">
+            <div class="content zero"></div>
+        </div>
+        <div class="block">
+            <div class="content translate"></div>
+        </div>
+    </div>
+    <div class="line clearfix">
+        <div class="block inline_block">
+            <div class="content vertical_middle"></div>
+        </div>
+
+    </div>
+</body>
+
+</html>
